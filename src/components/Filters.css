@@ -1,0 +1,71 @@
+.search-filters {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.filter-section {
+  padding: 1rem;
+}
+
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters-body {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 1rem 0;
+}
+
+.population-filter,
+.climate-filter,
+.terrain-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+button {
+  width: 100%;
+  background-color: white;
+  border: 0px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.reset-btn {
+  background: black;
+  border: 2px solid white;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .search-filters {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

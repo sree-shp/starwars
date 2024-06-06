@@ -1,0 +1,137 @@
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0.5em);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 1rem;
+  margin: 1rem 0rem;
+  font-family: "Lato", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  overflow: hidden;
+  border: 1px solid black;
+  width: 250px;
+  height: 250px;
+  flex-grow: 1;
+}
+
+.card:hover {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  border: 1px solid #fbeb04;
+}
+
+.planet-image {
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: rotatePlanet 120s linear infinite;
+  animation: rotatePlanet 120s linear infinite;
+}
+
+@-webkit-keyframes rotatePlanet {
+  0% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rotatePlanet {
+  0% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+
+.card-heading {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  text-align: left;
+  position: relative;
+  z-index: 10000;
+  padding: 0rem 0rem 1rem;
+}
+
+.card-details {
+  font-weight: 300;
+  font-size: 0.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.climate-terrain-wrapper {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.population-wrapper {
+  -ms-grid-row: 4;
+  grid-row-start: 4;
+}
+
+.population-wrapper,
+.climate-wrapper,
+.terrain-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.population-wrapper span:nth-child(2) {
+  font-size: 1rem;
+  letter-spacing: 3px;
+}
+
+.climate-heading,
+.terrain-heading,
+.population-heading {
+  font-size: 1rem;
+  color: #fbeb04;
+  letter-spacing: 1.5px;
+}
+
+.climate-details,
+.terrain-details,
+.population-details {
+  font-size: 1rem;
+  letter-spacing: 3px;
+  color: white;
+}
+
+.planet-image {
+  width: 100%;
+  position: absolute;
+  left: 30%;
+  z-index: -1000;
+}
